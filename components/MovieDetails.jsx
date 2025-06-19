@@ -150,7 +150,7 @@ export default function MovieDetails({API_KEY}){
     useEffect(() => {
         const fetchRecommended = async () => {
             try{
-                const result = await fetch(`http://localhost:5000/recommend?title=${movie.title}`);
+                const result = await fetch(`http://cinehub-production-c1d9.up.railway.app/recommend?title=${movie.title}`);
                 const data = await result.json();
                 let recommendations = data.recommendations;
                 
