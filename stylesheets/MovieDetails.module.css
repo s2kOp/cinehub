@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.arrowBack{
+    color: rgba(255, 255, 255, 0.683);
+    cursor: pointer;
+}
+
+.arrowBack:hover{
+    background-color: #4a4747f3;
+}
+
+.detailsWrapper{
+    color: white;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.detailsWrapper img{
+    width: 20%;
+    height: 500px;
+    align-self: center;
+}
+
+.document{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    row-gap: 12px;
+    margin-left: 10px; 
+}
+
+
+.document p {
+    max-width: 75%;
+}
+
+.castArea{
+    display: flex;
+    column-gap: 9px;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+}
+.castCard{
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+    align-items: center;
+    width: 9em;
+    height: 100%;
+    text-align: center;
+    transition: all 0.3s ease-in-out;    
+}
+
+.cardcast:hover{
+    transform: scale(0.9);
+}
+
+
+.castCard img{
+    width: 100%;
+    height: 75%;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px; 
+}
+
+::-webkit-scrollbar-track {
+  background: #2c2c2c;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+  border: 2px solid #2c2c2c;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+.recArea{
+    display: flex;
+    margin-top: 8px;
+    column-gap: 35px;
+    justify-content: center;
+}
+.recContainer h4{
+    padding: 10px 12px;
+    color: white;
+    font-size: 2em;
+}
+.recCard{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 9em;
+    height: 100%; 
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.recCard img{
+    width: 100%;
+    height: 75%;
+}
+
+.recCard:hover{
+    transform: scale(0.9);
+}
+
+@media (max-width: 600px){
+    *{
+        background-color: #272626;
+    }
+    .detailsWrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+    .detailsWrapper img{
+        width: 95%;
+    }
+    .document{
+        align-items: flex-start;
+    }
+    .document p {
+        max-width: 95%;
+    }
+    .recCard{
+        max-width: 10em;
+    }
+    .recArea{
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}

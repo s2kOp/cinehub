@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans';
+}
+
+.container{
+    color: white;
+    padding: 20px 16px;
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.639);
+}
+
+.head h1{
+    cursor: pointer;
+}
+
+.head div{
+    width: 50%;
+}
+
+.head div input{
+    height: 100%;
+    width: 500px;
+    outline: none;
+    background-color: hsl(0, 0%, 13%);
+    border: none;
+    border-radius: 15px;
+    padding-left: 10px;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.833);
+}
+
+.head div button{
+    margin-left: 8px;
+    height: 100%;
+    width: 100px;
+    background-color: rgb(255, 119, 0);
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer
+}
+.head div button:hover{
+    background-color: rgba(255, 119, 0, 0.811);
+}
+
+.moviesArea{
+    display: flex;
+    column-gap: 9px;
+    row-gap: 14px;
+    flex-wrap: wrap;
+    padding: 20px 15px;
+    justify-content: center;
+}
+
+.movieCard{
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+    align-items: center;
+    max-width: 15em;
+    padding: 8px 12px;
+    text-align: center;
+    background-color: hsl(0, 1%, 15%);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.movieCard img{
+    min-width: 100%;
+    max-width: 100%;
+}
+.movieCard div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 13px;
+    background-color: hsl(0, 1%, 15%);
+}
+.movieCard h2{
+    font-size: 1.2em;
+    background-color: #272626;
+}
+
+.movieCard:hover{
+    transform: scale(0.9);
+}
+
+@media(max-width: 600px){
+    .container{
+        width: 90%;
+        max-width: 500px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    .head{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 14px 0;
+    }
+    .head div{
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    .head div input{
+        min-width: 250px;
+        max-width: 250px;
+        height: 25px;
+        font-size: 14px;
+    }
+    .head div button{
+        font-size: 11px;
+        height: 25px;
+        width: 80px;
+        min-width: 80px;
+    }
+    .movieCard{
+        max-width: 10em;
+    }
+    .moviesArea{
+        justify-content: space-around;
+    }
+}
+
