@@ -48,6 +48,8 @@
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /
+    touch-action: pan-x;
 }
 .castCard{
     flex: 0 0 auto;
@@ -124,7 +126,7 @@
 
 @media (max-width: 600px){
     *{
-        background-color: #272626;
+        background-color: black;
     }
     .detailsWrapper{
         flex-direction: column;
