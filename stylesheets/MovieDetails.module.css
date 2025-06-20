@@ -48,7 +48,7 @@
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch; /
+    -webkit-overflow-scrolling: touch; 
     touch-action: pan-x;
 }
 .castCard{
